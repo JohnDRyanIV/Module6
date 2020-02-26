@@ -5,9 +5,12 @@ def score_input(test_name, test_score=0, invalid_message="Invalid test score, tr
     :param invalid_message: represents message shown to user upon invalid input
     :return message: represents message being printed
     """
+
+    while test_score < 0:
+        print(invalid_message)
+        test_score = int(input("Enter the test score"))
     message = test_name + ": " + str(test_score)
     return message
-    pass
 
 
 if __name__ == '__main__':
