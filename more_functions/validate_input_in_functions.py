@@ -6,9 +6,9 @@ def score_input(test_name, test_score=0, invalid_message="Invalid test score, tr
     :return message: represents message being printed
     """
 
-    while test_score < 0:
-        print(invalid_message)
-        test_score = int(input("Enter the test score"))
+    while test_score < 0 or test_score > 100:
+        print(str(invalid_message + " (" + str(test_score) + ")"))
+        test_score = int(input("Enter the test score: "))
     message = test_name + ": " + str(test_score)
     return message
 
