@@ -11,6 +11,7 @@ def multiply_string(m, n):
     returns string m repeating n times
     :param m: represents message to be repeated
     :param n: represents amount of times message will repeat
+    :returns r: represents message once it's been repeated n times
     """
     r = ""
     for i in range(0, n):
